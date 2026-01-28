@@ -1,0 +1,13 @@
+[package]
+name = "aether_fast_core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "aether_fast_core"
+crate-type = ["cdylib"] # Indica que es una librería que Python puede llamar
+
+[dependencies]
+# Actualizamos a pyo3 0.23 (o superior) que tiene mejor soporte para Python recientes
+pyo3 = { version = "0.23", features = ["extension-module", "abi3-py310"] } 
+numpy = "0.23"
